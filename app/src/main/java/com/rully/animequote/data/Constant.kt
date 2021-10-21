@@ -1,4 +1,4 @@
-package com.rully.animequote.view.data
+package com.rully.animequote.data
 
 import com.rully.animequote.R
 
