@@ -1,12 +1,31 @@
 package com.rully.animequote.view.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.rully.animequote.R
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.rully.animequote.databinding.ActivityMainBinding
+import com.rully.animequote.view.adapter.ListQuoteAdapter
+import com.rully.animequote.view.data.Constant
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var rvQuotes: RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        rvQuotes = binding.rvQuotes
+        rvQuotes.setHasFixedSize(true)
+        getListQuote()
+    }
+
+    private fun getListQuote() {
+        rvQuotes.layoutManager = LinearLayoutManager(this)
+        val listQuoteAdapter = ListQuoteAdapter(Constant.quoteList)
+        rvQuotes.adapter = listQuoteAdapter
     }
 }
