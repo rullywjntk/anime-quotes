@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.rully.animequote.databinding.ActivityMainBinding
-import com.rully.animequote.view.adapter.ListQuoteAdapter
-import com.rully.animequote.view.data.Constant
+import com.rully.animequote.adapter.ListQuoteAdapter
+import com.rully.animequote.data.Constant
 
 class MainActivity : AppCompatActivity() {
 

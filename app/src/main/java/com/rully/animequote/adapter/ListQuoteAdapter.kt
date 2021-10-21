@@ -1,4 +1,4 @@
-package com.rully.animequote.view.adapter
+package com.rully.animequote.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.rully.animequote.R
-import com.rully.animequote.view.data.Quote
+import com.rully.animequote.data.Quote
 
 class ListQuoteAdapter(private val listQuote: ArrayList<Quote>) : RecyclerView.Adapter<ListQuoteAdapter.ViewHolder>() {
 
